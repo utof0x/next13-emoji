@@ -1,7 +1,7 @@
 export default function Input() {
   return (
     <div className="flex flex-col items-center max-auto mt-12">
-      <div className="text-3xl text-center text-textColor font-roboto font-semibold">
+      <div className="sm:text-2xl lg:text-3xl text-center text-textColor font-roboto font-semibold">
         Click on emoji to copy it to clipboard
       </div>
       <input
