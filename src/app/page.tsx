@@ -1,14 +1,18 @@
 import Head from "./components/Head";
-import Input from "./components/Input";
 import Emojis from "./components/Emojis";
+import { Emoji } from "types";
+
+async function getEmojis() {
+  return (await fetch("https://emojihub.yurace.pro/api/all")).json();
+}
 
 export default async function HomePage() {
+  const emojis: Emoji[] = await getEmojis();
+
   return (
     <div className="bg-background min-h-screen">
       <Head />
-      <Input />
-      {/* @ts-expect-error Server Component */}
-      <Emojis />
+      <Emojis emojis={emojis} />
     </div>
   );
 }

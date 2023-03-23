@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+
 import { Emoji } from "types";
 
 export default function Emoji({
@@ -9,12 +9,10 @@ export default function Emoji({
   name: string;
   htmlCode: string[];
 }) {
-  const emojiRef = useRef();
-
   return (
     <>
       <div
-        onClick={(e) => {
+        onClick={() => {
           const emoji = document.querySelector(
             `div[data-htmlCode="${htmlCode[0]}"]`
           )?.innerHTML;
