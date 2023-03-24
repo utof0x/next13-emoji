@@ -1,7 +1,5 @@
 "use client";
 
-import { Emoji } from "types";
-
 export default function Emoji({
   name,
   htmlCode,
